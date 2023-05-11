@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>List of Teachers</title>
+  <link rel="stylesheet" type="text/css" media="all" href="../../static/css/style.css" th:href="@{/css/style.css}">
+</head>
+<body>
+<table class="table">
+  <thead>
+  <tr>
+    <td>Имя</td>
+    <td>Фамилия</td>
+    <td>Факультет</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="t :${teachers}">
+    <td><span th:text="${t.firstName}"></span></td>
+    <td><span th:text="${t.lastName}"></span></td>
+    <td><span th:text="${t.departament.name}"></span></td>
+  </tr>
+  </tbody>
+</table>
+
+<a class="btn_link" href=../>Back to Main Page</a>
+<a class="btn_link" href="teacher/create">Add Teacher</a>
+</body>
+</html>

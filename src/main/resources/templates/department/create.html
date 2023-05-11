@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Departments</title>
+    <link rel="stylesheet" type="text/css" media="all" href="../../static/css/style.css" th:href="@{/css/style.css}">
+</head>
+<body>
+<form class="form" action="/deps/create" method="post">
+    <label>Department`s name:</label>
+    <input type="text" name="name">
+    <input type="submit" value="Add">
+</form>
+<div style="margin-top: 50px">
+    <a class="btn_link" href=../>Back to Main Page</a>
+    <a class="btn_link" href="/deps">Back to Teacher`s list</a>
+</div>
+</body>
+</html>

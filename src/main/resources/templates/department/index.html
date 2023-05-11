@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Departaments</title>
+  <link rel="stylesheet" type="text/css" media="all" href="../../static/css/style.css" th:href="@{/css/style.css}">
+</head>
+<body>
+<table class="table">
+  <thead>
+  <tr>
+    <td style="font-size: 28px;font-weight: 700">Название факультета</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="dep: ${departments}">
+    <td><span th:text="${dep.name}">Name</span></td>
+
+  </tr>
+  </tbody>
+</table>
+<a class="btn_link" href="../">На главную</a>
+<a class="btn_link" href="../deps/create">Добавить факультет</a>
+</body>
+</html>

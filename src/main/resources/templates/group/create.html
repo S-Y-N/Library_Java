@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Group</title>
+    <link rel="stylesheet" type="text/css" media="all" href="../../static/css/style.css" th:href="@{/css/style.css}">
+</head>
+<body>
+<form class="form" action="/group/create" method="post">
+    <label for="groups">Departments</label>
+    <select id="groups" name="depart_id">
+        <option th:each="g :${departments}"
+                th:text="${g.name}"
+                th:value="${g.id}">
+        </option>
+    </select>
+    <label>Name:</label>
+    <input type="text" name="name">
+    <input type="submit" value="Add">
+</form>
+<div style="margin-top: 50px">
+    <a class="btn_link" href=../>Back to Main Page</a>
+    <a class="btn_link" href="/group">Back to Teacher`s list</a>
+</div>
+</body>
+</html>

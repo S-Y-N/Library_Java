@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>University Library</title>
+   <link rel="stylesheet" type="text/css" media="all" href="../../static/css/style.css" th:href="@{/css/style.css}">
+</head>
+<body>
+    <h1>University Library</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>Название</td>
+            <td>Жанр</td>
+            <td>Год издания</td>
+            <td>Издательство</td>
+            <td>К-во страниц</td>
+            <td>Описание</td>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="book: ${books}">
+            <td><span th:text="${book.name}">Name</span></td>
+            <td><span th:text="${book.genre.name}">Genre Name</span></td>
+            <td><span th:text="${book.year}">Year</span></td>
+            <td><span th:text="${book.publish.name}">Publish</span></td>
+            <td><span th:text="${book.pages}">Pages</span></td>
+            <td><span th:text="${book.description}">Desc</span></td>
+        </tr>
+    </tbody>
+</table>
+    <a class="btn_link" href="../author">Список авторов</a>
+    <a class="btn_link" href="../author/create">Добавить автора</a>
+    <a class="btn_link" href="../libs">Выдать книгу</a>
+</body>
+</html>
+

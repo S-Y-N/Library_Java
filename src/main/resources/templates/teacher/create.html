@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Teacher</title>
+    <link rel="stylesheet" type="text/css" media="all" href="../../static/css/style.css" th:href="@{/css/style.css}">
+</head>
+<body>
+<!--<div th:each="t : ${teachers}">
+    <span th:text="${t.firstName}"></span>
+</div>-->
+<form class="form" action="/teacher/create" method="post">
+    <label for="teachers">Departments</label>
+    <select id="teachers" name="depart_id">
+        <option th:each="d :${teachers}"
+                th:text="${d.departament.name}"
+                th:value="${d.departament.id}">
+        </option>
+    </select>
+    <label>Name:</label>
+    <input type="text" name="firstName">
+    <label>Last name:</label>
+    <input type="text" name="lastName">
+    <input type="submit" value="Add">
+</form>
+<div style="margin-top: 50px">
+<a class="btn_link" href=../>Back to Main Page</a>
+<a class="btn_link" href="/teacher">Back to Teacher`s list</a>
+</div>
+</body>
+</html>
